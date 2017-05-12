@@ -1,13 +1,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc",
+    "outDir": "./dist",
     "baseUrl": "src",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "stripInternal": true,
+    "skipLibCheck": true,
     "target": "es5",
     "typeRoots": [
       "node_modules/@types"
@@ -16,5 +18,11 @@
       "es2016",
       "dom"
     ]
-  }
+  },
+  "files": [
+    "avatar.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

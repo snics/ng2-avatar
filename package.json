@@ -1,16 +1,53 @@
 {
   "name": "ng2-avatar",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
+  "description": "Angular 2/4 Avatar (ng2-avatar) is a simple and lightweight avatar component",
+  "main": "./dist/avatar",
+  "typings": [
+    "./dist./avatar.d.ts"
+  ],
+  "keywords": [
+    "angular 2",
+    "angular 4",
+    "ng",
+    "ng2",
+    "avatar",
+    "angular-avatar",
+    "letter avatar",
+    "initials avatar",
+    "angular avatar",
+    "profile picture",
+    "string avatar",
+    "ng-avatar",
+    "ng2-avatar",
+    "gravatar",
+    "gravatar api",
+    "angular-gravatar",
+    "ng-gravatar",
+    "ng2-gravatar"
+  ],
+  "author": {
+    "name": "Nico Swiatecki",
+    "email": "<nico@swiatecki.io>"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snics/ng2-avatar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/snics/ng2-avatar/issues"
+  },
+  "homepage": "https://github.com/snics/ng2-avatar/issues#readme",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prepublish": "tsc"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
@@ -22,6 +59,7 @@
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
+    "ts-md5": "^1.2.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

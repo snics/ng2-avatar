@@ -1,28 +1,71 @@
-# Ng2Avatar
+# ng2-avatar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
+[![npm version](https://img.shields.io/npm/v/@snic/ng2-avatar.svg?style=flat-square)](https://www.npmjs.com/package/snic/ng2-avatar)
+[![devDependencies Status](https://img.shields.io/david/dev/snics/ng2-avatar.svg?style=flat-square)](https://david-dm.org/snics/ng2-avatar?type=dev)
+[![peerDependencies Status](https://img.shields.io/david/peer/snics/ng2-avatar.svg?style=flat-square)](https://david-dm.org/snicsn/ng2-avatar?type=peer)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/snics/ng2-avatar/blob/master/LICENSE)
 
-## Development server
+Angular 2/4 Avatar (ng2-avatar) is a simple and lightweight component that generates a letter's avatar or displayed a picture from Gravatar API
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
+1. Install the npm package.
+```bash
+npm i --save ng2-avatar
+```
 
-## Code scaffolding
+2. Import AvatarComponent in your application :
+```TypeScript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { AppComponent } from './app.component';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+import { AvatarComponent } from 'ng2-avatar';
 
-## Build
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
 
-## Running unit tests
+# Usage
+```
+  <avatar [email]="email" [displayType]="'circle'"></avatar>
+  <input type="email" [(ngModel)]="email">
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Configuration
+| configuration option |  type  |    default   | description                                                                           |
+|----------------------|:------:|:------------:|---------------------------------------------------------------------------------------|
+| email                | String | ''           | This email is for generated the initials letters or get the picture from Gravatar API |
+| name                 | string | ''           | This name is for generated the initials letters                                       |
+| size                 | number | 100          | Is the size of the image and avatar                                                   |
+| background           | string | Random color | The background colors for the letter's avatar                                         |
+| displayType          | string | none         | none|circle|rounded                                                                   |
+| letter               | string | ?            | These are the default letter                                                          |
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+### Dependencies
 
-## Further help
+* [ts-md5](https://github.com/cotag/ts-md5) - The Md5 hashing framework used
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+(The MIT License)
+
+Copyright (c) 12.05.17 Nico Swiatecki - *Initial work* - [Snics](https://github.com/snics)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
