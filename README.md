@@ -60,7 +60,7 @@ export class AppModule { }
 
 * [ts-md5](https://github.com/cotag/ts-md5) - The Md5 hashing framework used
 
-(The MIT License)
+##### (The MIT License)
 
 Copyright (c) 12.05.17 Nico Swiatecki - *Initial work* - [Snics](https://github.com/snics)
 
