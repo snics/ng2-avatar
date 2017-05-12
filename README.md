@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/ng2-avatar.svg?style=flat-square)](https://www.npmjs.com/package/snic/ng2-avatar)
 [![devDependencies Status](https://img.shields.io/david/dev/snics/ng2-avatar.svg?style=flat-square)](https://david-dm.org/snics/ng2-avatar?type=dev)
-[![peerDependencies Status](https://img.shields.io/david/peer/snics/ng2-avatar.svg?style=flat-square)](https://david-dm.org/snics/ng2-avatar?type=peer)
+[![Dependencies Status](https://david-dm.org/snics/ng2-avatar/status.svg)](https://david-dm.org/snics/ng2-avatar)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/snics/ng2-avatar#the-mit-license)
 
 Angular 2/4 Avatar (ng2-avatar) is a simple and lightweight component that generates a letter's avatar or displayed a picture from Gravatar API
