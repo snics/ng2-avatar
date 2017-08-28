@@ -21,7 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
-import { AvatarComponent } from 'ng2-avatar';
+import { AvatarModule } from "ng2-avatar";
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { AvatarComponent } from 'ng2-avatar';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AvatarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
