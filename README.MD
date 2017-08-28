@@ -47,14 +47,14 @@ export class AppModule { }
 ```
 
 # Configuration
-| configuration option |  type  |    default   | description                                                                           |
-|----------------------|:------:|:------------:|---------------------------------------------------------------------------------------|
-| email                | String | ''           | This email is for generated the initials letters or get the picture from Gravatar API |
-| name                 | string | ''           | This name is for generated the initials letters                                       |
-| size                 | number | 100          | Is the size of the image and avatar                                                   |
-| background           | string | Random color | The background colors for the letter's avatar                                         |
-| displayType          | string | none         | none,circle,rounded                                                                   |
-| letter               | string | ?            | These are the default letter                                                          |
+| configuration option |  type  |   default    | description                                                                                      |
+|:---------------------|:------:|:------------:|:-------------------------------------------------------------------------------------------------|
+| email                | String |     none     | This email is for generated the initials letters or get the picture from Gravatar API (required) |
+| name                 | string |     none     | This name is for generated the initials letters (required)                                       |
+| size                 | number |     100      | Is the size of the image and avatar                                                              |
+| background           | string | Random color | The background colors for the letter's avatar                                                    |
+| displayType          | string |    circle    | none, circle, rounded                                                                              |
+| letter               | string |      ?       | These are the default letter                                                                     |
 
 
 ### Dependencies
