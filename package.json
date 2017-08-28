@@ -1,12 +1,25 @@
 {
   "name": "ng2-avatar",
   "version": "1.0.4",
-  "license": "MIT",
   "description": "Angular 2/4 Avatar (ng2-avatar) is a simple and lightweight avatar component",
-  "main": "./dist/avatar",
-  "typings": [
-    "./dist./avatar.d.ts"
-  ],
+  "scripts": {
+    "build": "gulp build",
+    "build:watch": "gulp",
+    "docs": "npm run docs:build",
+    "docs:build": "compodoc -p tsconfig.json -n ngx-avatar -d docs --hideGenerator",
+    "docs:serve": "npm run docs:build -- -s",
+    "docs:watch": "npm run docs:build -- -s -w",
+    "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
+    "test": "tsc && karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snics/ng2-avatar.git"
+  },
+  "author": {
+    "name": "Nico Swiatecki",
+    "email": "nico@devninjas.io"
+  },
   "keywords": [
     "angular 2",
     "angular 4",
@@ -27,58 +40,51 @@
     "ng-gravatar",
     "ng2-gravatar"
   ],
-  "author": {
-    "name": "Nico Swiatecki",
-    "email": "<nico@swiatecki.io>"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/snics/ng2-avatar.git"
-  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/snics/ng2-avatar/issues"
   },
   "homepage": "https://github.com/snics/ng2-avatar/issues#readme",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "prepublish": "tsc"
-  },
-  "dependencies": {
+  "devDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
     "@angular/core": "^4.0.0",
-    "@angular/forms": "^4.0.0",
-    "@angular/http": "^4.0.0",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
-    "@angular/router": "^4.0.0",
+    "@compodoc/compodoc": "^1.0.0-beta.10",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "~6.0.60",
+    "codelyzer": "~2.0.0",
     "core-js": "^2.4.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rollup": "^2.11.0",
+    "jasmine-core": "~2.5.2",
+    "jasmine-spec-reporter": "~3.2.0",
+    "karma": "~1.4.1",
+    "karma-chrome-launcher": "~2.0.0",
+    "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "node-sass": "^4.5.2",
+    "node-sass-tilde-importer": "^1.0.0",
+    "node-watch": "^0.5.2",
+    "protractor": "~5.1.0",
+    "rollup": "^0.41.6",
+    "run-sequence": "^1.2.2",
     "rxjs": "^5.1.0",
-    "ts-md5": "^1.2.0",
+    "ts-node": "~2.0.0",
+    "tslint": "~4.5.0",
+    "typescript": "~2.2.0",
     "zone.js": "^0.8.4"
   },
-  "devDependencies": {
-    "@angular/cli": "1.0.3",
-    "@angular/compiler-cli": "^4.0.0",
-    "@types/jasmine": "2.5.38",
-    "@types/node": "°6.0.60",
-    "codelyzer": "2.0.0",
-    "jasmine-core": "^2.6.1",
-    "jasmine-spec-reporter": "^4.1.0",
-    "karma": "^1.4.1",
-    "karma-chrome-launcher": "^2.1.1",
-    "karma-cli": "^1.0.1",
-    "karma-jasmine": "^1.1.0",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^1.2.1",
-    "protractor": "^5.1.0",
-    "ts-node": "^3.0.4",
-    "tslint": "^5.2.0",
-    "typescript": "^2.2.0"
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "dependencies": {
+    "ts-md5": "^1.2.2"
   }
 }

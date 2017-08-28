@@ -1,0 +1,45 @@
+{
+  "name": "ng2-avatar",
+    "version": "1.0.4",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snics/ng2-avatar.git"
+  },
+  "author": {
+    "name": "Nico Swiatecki",
+    "email": "nico@devninjas.io"
+  },
+  "keywords": [
+    "angular 2",
+    "angular 4",
+    "ng",
+    "ng2",
+    "avatar",
+    "angular-avatar",
+    "letter avatar",
+    "initials avatar",
+    "angular avatar",
+    "profile picture",
+    "string avatar",
+    "ng-avatar",
+    "ng2-avatar",
+    "gravatar",
+    "gravatar api",
+    "angular-gravatar",
+    "ng-gravatar",
+    "ng2-gravatar"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "nico@devninjas.io/issues"
+  },
+  "main": "ngx-avatar.umd.js",
+  "module": "ngx-avatar.js",
+  "jsnext:main": "ngx-avatar.js",
+  "typings": "ngx-avatar.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}

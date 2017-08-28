@@ -52,7 +52,7 @@ export class AppModule { }
 | name                 | string | ''           | This name is for generated the initials letters                                       |
 | size                 | number | 100          | Is the size of the image and avatar                                                   |
 | background           | string | Random color | The background colors for the letter's avatar                                         |
-| displayType          | string | none         | none|circle|rounded                                                                   |
+| displayType          | string | none         | none,circle,rounded                                                                   |
 | letter               | string | ?            | These are the default letter                                                          |
 
 
