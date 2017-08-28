@@ -12,8 +12,6 @@
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "test": "tsc && karma start"
   },
-  "main": "dist/ng2-avatar.umd.js",
-  "module": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/snics/ng2-avatar.git"
