@@ -1,6 +1,6 @@
 {
   "name": "ng2-avatar",
-    "version": "2.0.0",
+  "version": "2.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/snics/ng2-avatar.git"
@@ -14,6 +14,8 @@
     "angular 4",
     "ng",
     "ng2",
+    "ng4",
+    "ngx",
     "avatar",
     "angular-avatar",
     "letter avatar",
@@ -23,6 +25,8 @@
     "string avatar",
     "ng-avatar",
     "ng2-avatar",
+    "ng4-avatar",
+    "ngx-avatar",
     "gravatar",
     "gravatar api",
     "angular-gravatar",

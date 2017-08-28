@@ -13,4 +13,4 @@ import { AvatarComponent } from "./avatar.component";
     AvatarComponent
   ]
 })
-export class AvatarModule { }
+export class AvatarModule {}
