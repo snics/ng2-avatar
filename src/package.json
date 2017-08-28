@@ -1,6 +1,6 @@
 {
   "name": "ng2-avatar",
-    "version": "1.0.4",
+    "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/snics/ng2-avatar.git"
@@ -31,12 +31,12 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "nico@devninjas.io/issues"
+    "url": "https://github.com/snics/ng2-avatar/issues"
   },
-  "main": "ngx-avatar.umd.js",
-  "module": "ngx-avatar.js",
-  "jsnext:main": "ngx-avatar.js",
-  "typings": "ngx-avatar.d.ts",
+  "main": "ng2-avatar.umd.js",
+  "module": "ng2-avatar.js",
+  "jsnext:main": "ng2-avatar.js",
+  "typings": "ng2-avatar.d.ts",
   "peerDependencies": {
     "@angular/core": "^4.0.0",
     "rxjs": "^5.1.0",
