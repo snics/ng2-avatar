@@ -55,6 +55,7 @@ export class AppModule { }
 | background           | string | Random color | The background colors for the letter's avatar                                                    |
 | displayType          | string |    circle    | none, circle, rounded                                                                              |
 | letter               | string |      ?       | These are the default letter                                                                     |
+| enforceHttps         | boolean |      false   | Optional parameter to switch to the not protocol-agnostic gravatar url                          |
 
 
 ### Dependencies
