@@ -1,5 +1,7 @@
-import { Component, Input, OnChanges, OnInit } from "@angular/core";
-import { Md5 } from "ts-md5/dist/md5";
+/* tslint:disable component-selector */
+
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Md5 } from 'ts-md5/dist/md5';
 
 @Component({
   selector: 'avatar',
@@ -12,7 +14,11 @@ import { Md5 } from "ts-md5/dist/md5";
          [style.font-size]='props.fontSize'
          [style.border-radius]='props.borderradius'
          [style.text-align]="props.textalign">
-      <img style="vertical-align: top;" *ngIf="displayImage" [src]="gravatarUrl" (error)="displayImage = false;" alt="{{name}} | {{letter}}"/>
+      <img style="vertical-align: top;"
+      *ngIf="displayImage"
+      [src]="gravatarUrl"
+      (error)="displayImage = false;"
+      alt="{{name}} | {{letter}}"/>
       <span *ngIf="!displayImage" [style.color]='fontColor'>{{letter}}</span>
     </div>`,
   styles  : ['.avatar {text-align : center;overflow   : auto;}']
