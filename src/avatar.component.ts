@@ -25,7 +25,7 @@ export class AvatarComponent implements OnInit, OnChanges {
   @Input('background') background = this.getRandomColor();
   @Input('displayType') displayType = 'none';
   @Input('letter') letter = '?';
-  @Input('enforceHttps') enforceHttps = false;
+  @Input('defaultProtocol') defaultProtocol: string = null;
 
   gravatarUrl: string;
   displayImage = true;
@@ -66,7 +66,7 @@ export class AvatarComponent implements OnInit, OnChanges {
         .appendStr(this.email)
         .end();
 
-      const protocol = this.enforceHttps ? 'https:' : '';
+      const protocol = this.defaultProtocol ? this.defaultProtocol + ':' : '';
       this.gravatarUrl = `${protocol}//www.gravatar.com/avatar/${hash}?s=${this.size}&d=404`;
       this.displayImage = true;
     } else {
