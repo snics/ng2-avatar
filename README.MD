@@ -1,47 +1,80 @@
 # ng2-avatar
 
-[![npm version](https://img.shields.io/npm/v/ng2-avatar.svg?style=flat-square)](https://www.npmjs.com/package/snic/ng2-avatar)
-[![devDependencies Status](https://img.shields.io/david/dev/snics/ng2-avatar.svg?style=flat-square)](https://david-dm.org/snics/ng2-avatar?type=dev)
-[![Dependencies Status](https://david-dm.org/snics/ng2-avatar/status.svg)](https://david-dm.org/snics/ng2-avatar)
+[![npm version](https://badge.fury.io/js/ng2-avatar.svg)](https://badge.fury.io/js/ng2-avatar),
+[![Build Status](https://travis-ci.org/snics/ng2-avatar.svg?branch=master)](https://travis-ci.org/snics/ng2-avatar)
+[![Coverage Status](https://coveralls.io/repos/github/snics/ng2-avatar/badge.svg?branch=master)](https://coveralls.io/github/snics/ng2-avatar?branch=master)
+[![dependency Status](https://david-dm.org/snics/ng2-avatar/status.svg)](https://david-dm.org/snics/ng2-avatar)
+[![devDependency Status](https://david-dm.org/snics/ng2-avatar/dev-status.svg?branch=master)](https://david-dm.org/snics/ng2-avatar#info=devDependencies)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/snics/ng2-avatar#the-mit-license)
 
-Angular 2/4 Avatar (ng2-avatar) is a simple and lightweight component that generates a letter's avatar or displayed a picture from Gravatar API
+Angular Avatar (ng2-avatar) is a simple and lightweight avatar component
+
+## Demo
+
+View all the directives in action at https://snics.github.io/ng2-avatar
+
+## Dependencies
+* [Angular](https://angular.io) (*requires* Angular 2 or higher, tested with 2.0.0)
+* [ts-md5](https://github.com/cotag/ts-md5) - The Md5 hashing framework
 
 ## Installation
-1. Install the npm package.
-```bash
-npm i --save ng2-avatar
+Install above dependencies via *npm*. 
+
+Now install `ng2-avatar` via:
+```shell
+npm install --save ng2-avatar
 ```
 
-2. Import AvatarComponent in your application :
-```TypeScript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { AppComponent } from './app.component';
+---
+##### SystemJS
+>**Note**:If you are using `SystemJS`, you should adjust your configuration to point to the UMD bundle.
+In your systemjs config file, `map` needs to tell the System loader where to look for `ng2-avatar`:
+```js
+map: {
+  'ng2-avatar': 'node_modules/ng2-avatar/bundles/ng2-avatar.umd.js',
+}
+```
+---
 
-import { AvatarModule } from "ng2-avatar";
+Once installed you need to import the main module:
+```js
+import { AvatarModule } from 'ng2-avatar';
+```
+The only remaining part is to list the imported module in your application module. The exact method will be slightly
+different for the root (top-level) module for which you should end up with the code similar to (notice ` AvatarModule.forRoot()`):
+```js
+import { AvatarModule } from 'ng2-avatar';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
+    ...
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    AvatarModule.forRoot()
-  ],
-  providers: [],
+    AvatarModule.forRoot(), 
+    ...
+  ],  
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
+```
 
+Other modules in your application can simply import ` AvatarModule `:
+
+```js
+import { AvatarModule } from 'ng2-avatar';
+
+@NgModule({
+  declarations: [OtherComponent, ...],
+  imports: [LibModule, ...], 
+})
+export class OtherModule {
+}
 ```
 
 # Usage
-```
+```html
   <avatar [email]="email" [displayType]="'circle'"></avatar>
   <input type="email" [(ngModel)]="email">
 ```
@@ -57,14 +90,9 @@ export class AppModule { }
 | letter               | string |      ?       | These are the default letter                                                                     |
 | defaultProtocol      | string |      null    | specifies a protocol or uses protocol-agnostic gravatar url when empty                              |
 
+## License
 
-### Dependencies
-
-* [ts-md5](https://github.com/cotag/ts-md5) - The Md5 hashing framework used
-
-### (The MIT License)
-
-Copyright (c) 12.05.17 Nico Swiatecki - *Initial work* - [Snics](https://github.com/snics)
+Copyright (c) 2017 Nico Swiatecki. Licensed under the MIT License (MIT) - *Initial work* - [Snics](https://github.com/snics)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

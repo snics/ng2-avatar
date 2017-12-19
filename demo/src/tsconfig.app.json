@@ -1,0 +1,18 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "baseUrl": "./",
+    "module": "es2015",
+    "types": [],
+    "paths": {
+      "@angular/*": ["../node_modules/@angular/*"],
+      "ts-md5": ["../node_modules/ts-md5"]
+    }
+  },
+  "exclude": [
+    "testing/*",
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}

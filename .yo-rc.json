@@ -1,0 +1,33 @@
+{
+  "generator-ngx-library": {
+    "version": "5.4.0",
+    "authorName": "Nico Swiatecki",
+    "authorEmail": "nico@devninjas.io",
+    "githubUsername": "snics",
+    "githubRepoName": "ng2-avatar",
+    "projectName": "ng2-avatar",
+    "projectVersion": "2.1.1",
+    "projectDescription": "Angular Avatar (ng2-avatar) is a simple and lightweight avatar component",
+    "projectKeywords": [
+      "ng",
+      "angular",
+      "library"
+    ],
+    "ngVersion": "2.0.0",
+    "ngModules": [
+      "core",
+      "common"
+    ],
+    "otherDependencies": [
+      "ts-md5"
+    ],
+    "dependenciesRange": "^",
+    "ngPrefix": "ng2-avatar",
+    "useGreenkeeper": false,
+    "useCompodoc": true,
+    "enforceNgGitCommitMsg": true,
+    "exclusions": [
+      "src/tsconfig.lib.es5.json"
+    ]
+  }
+}

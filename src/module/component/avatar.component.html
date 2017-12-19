@@ -1,0 +1,14 @@
+<div class="avatar"
+     *ngIf="props"
+     [style.background-color]="props.background"
+     [style.width]="props.size"
+     [style.line-height]='props.lineheight'
+     [style.height]='props.size'
+     [style.font-size]='props.fontSize'
+     [style.border-radius]='props.borderradius'>
+      <img *ngIf="displayImage"
+           [src]="gravatarUrl"
+           (error)="displayImage = false;"
+           alt="{{name}} | {{letter}}"/>
+      <span *ngIf="!displayImage" [style.color]='fontColor'>{{letter}}</span>
+</div>
