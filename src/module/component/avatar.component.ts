@@ -1,7 +1,7 @@
 /* tslint:disable component-selector-name */
 
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
-import { Md5 } from 'ts-md5/dist/md5';
+import {Md5} from 'ts-md5/dist/md5';
 
 /**
  * The main component for the avatar
@@ -74,7 +74,7 @@ export class AvatarComponent implements OnInit, OnChanges {
   getRandomColor(): string {
     const letters = '0123456789ABCDEF'.split('');
     let color = '#';
-    for ( let i = 0; i < 6; i++ ) {
+    for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
@@ -114,16 +114,13 @@ export class AvatarComponent implements OnInit, OnChanges {
     }
   }
 
-  /**
-   * Set avatar size, background and display type
-   */
-  ngOnInit() {
+  setCssProps() {
     this.fontSize = (39 * this.size) / 100;
     this.props = {
-      size      : `${this.size}px`,
+      size: `${this.size}px`,
       lineheight: `${this.size}px`,
       background: this.background,
-      fontSize  : `${this.fontSize}px`
+      fontSize: `${this.fontSize}px`
     };
 
     switch (this.displayType) {
@@ -136,6 +133,13 @@ export class AvatarComponent implements OnInit, OnChanges {
       default:
         this.props['borderradius'] = '0';
     }
+  }
+
+  /**
+   * Set avatar size, background and display type
+   */
+  ngOnInit() {
+    this.setCssProps();
 
     this.getLetter();
     this.getAvatar();

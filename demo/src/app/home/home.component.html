@@ -6,7 +6,7 @@
 			</div>
 			<div class="col-sm-8 text-center text-md-left">
 				<h1>ng2-avatar</h1>
-				<p>Angular Avatar (ng2-avatar) is a simple and lightweight avatar component</p>
+				<p>Angular2+ Avatar (ng2-avatar) is a simple and lightweight avatar component</p>
 				<p>Scroll down to see it in action!</p>
 				<p class="buttons">
 					<a class="btn btn-outline-primary btn-lg" href="https://github.com/snics/ng2-avatar" target="_blank"><i class="fa fa-github fa-lg"></i>  Code on Github</a>
@@ -20,9 +20,80 @@
 
 <section class="home">
   <div class="container">
-		<!-- put your content here-->
-		<p>Put your content here. Typically, examples of your library in action (directives, components...)</p>
-		<avatar></avatar>
-		<p>Happy ng-hacking!</p>
+    <section>
+      <h2>Playground</h2>
+
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input (input)="email = $event.target.value"
+                   type="email"
+                   class="form-control"
+                   id="email"
+                   placeholder="Enter email..">
+          </div>
+
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input (input)="name = $event.target.value"
+                   type="text"
+                   class="form-control"
+                   id="name"
+                   placeholder="Enter full name..">
+          </div>
+
+          <div class="form-group">
+            <label for="name">Size:</label>
+            <input (input)="size = $event.target.value"
+                   (change)="changeData()"
+                   type="number"
+                   class="form-control"
+                   id="size"
+                   placeholder="100">
+          </div>
+
+          <div class="form-group">
+            <label for="background">Background color:</label>
+            <input (input)="background = $event.target.value"
+                   (change)="changeData()"
+                   type="text"
+                   class="form-control"
+                   id="background"
+                   placeholder="#cf2c4b">
+          </div>
+
+
+          <div class="form-group">
+            <label for="background">Display type:</label>
+            <select (input)="displayType = $event.target.value"
+                    (change)="changeData()"
+                    class="form-control">
+              <option>none</option>
+              <option>circle</option>
+              <option>rounded</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="letter">Letter:</label>
+            <input (input)="letter = $event.target.value"
+                   type="text"
+                   class="form-control"
+                   id="letter" placeholder="?">
+          </div>
+        </div>
+
+        <div class="col-6">
+          <avatar #avatar
+                  [email]="email"
+                  [name]="name"
+                  [size]="size"
+                  [background]="background"
+                  [displayType]="displayType"
+                  [letter]="letter"></avatar>
+        </div>
+      </div>
+    </section>
   </div>
 </section>

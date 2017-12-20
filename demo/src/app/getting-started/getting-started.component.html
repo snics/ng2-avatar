@@ -6,7 +6,104 @@
 
 <section class="getting-started">
   <div class="container">
-<!-- put your content here-->
-Put your content here. Typically instructions about how to install/use your library.
+
+    <h2>Dependencies</h2>
+    <ul>
+      <li><a href="https://angular.io" target="_blank">Angular</a> (<em>requires</em> Angular 2 or higher, tested with 2.0.0)</li>
+      <li><a href="https://github.com/cotag/ts-md5" target="_blank">ts-md5</a> - The Md5 hashing framework</li>
+    </ul>
+
+    <h2>Installation</h2>
+    <p>Install above dependencies via <em>npm</em>.</p>
+    <p>Now install <code>ng2-avatar</code> via:</p>
+
+    <pre class="editor editor-colors">>npm install --save ng2-avatar</pre>
+
+
+    <h5>SystemJS</h5>
+    <blockquote>
+      <p><strong>Note</strong>:If you are using <code>SystemJS</code>, you should adjust your configuration to point to
+        the UMD bundle.
+        In your systemjs config file, <code>map</code> needs to tell the System loader where to look for <code>ng2-avatar</code>:
+      </p>
+    </blockquote>
+
+    <pre class="editor editor-colors"><div class="line"><span class="source js"><span>map</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{{ '{' }}</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>ng2-avatar</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>node_modules/ng2-avatar/bundles/ng2-avatar.umd.js</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span class="meta brace curly js"><span>}</span></span></span></div></pre>
+
+    <p>Once installed you need to import the main module:</p>
+
+    <pre class="editor editor-colors"><div class="line"><span class="source js"><span class="meta import js"><span class="keyword control js"><span>import</span></span><span>&nbsp;</span><span class="punctuation definition modules begin js"><span>{{ '{' }}</span></span><span class="variable other module js"><span>AvatarModule</span></span><span class="punctuation definition modules end js"><span>}</span></span><span>&nbsp;</span><span class="keyword control js"><span>from</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>ng2-avatar</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div></pre>
+
+    <p>The only remaining part is to list the imported module in your application module. The exact method will be
+      slightly
+      different for the root (top-level) module for which you should end up with the code similar to (notice <code>AvatarModule.forRoot()</code>):
+    </p>
+
+    <pre class="editor editor-colors"><div class="line"><span class="source js"><span class="meta import js"><span class="keyword control js"><span>import</span></span><span>&nbsp;</span><span class="punctuation definition modules begin js"><span>{{ '{' }}</span></span><span class="variable other module js"><span>AvatarModule</span></span><span class="punctuation definition modules end js"><span>}</span></span><span>&nbsp;</span><span class="keyword control js"><span>from</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>ng2-avatar</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span>@</span><span class="meta function-call js"><span class="entity name function js"><span>NgModule</span></span><span class="meta arguments js"><span class="punctuation definition arguments begin bracket round js"><span>(</span></span><span class="meta brace curly js"><span>{{ '{' }}</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta function-call js"><span class="meta arguments js"><span>&nbsp;&nbsp;declarations</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace square js"><span>[</span></span><span>AppComponent</span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="keyword operator spread js"><span>...</span></span><span class="meta brace square js"><span>]</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta function-call js"><span class="meta arguments js"><span>&nbsp;&nbsp;imports</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace square js"><span>[</span></span><span class="variable other object js"><span>AvatarModule</span></span><span class="meta method-call js"><span class="meta delimiter method period js"><span>.</span></span><span class="entity name function js"><span>forRoot</span></span><span class="meta arguments js"><span class="punctuation definition arguments begin bracket round js"><span>(</span></span><span class="punctuation definition arguments end bracket round js"><span>)</span></span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="keyword operator spread js"><span>...</span></span><span class="meta brace square js"><span>]</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;&nbsp;</span></span></span></span></div><div class="line"><span class="source js"><span class="meta function-call js"><span class="meta arguments js"><span>&nbsp;&nbsp;bootstrap</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace square js"><span>[</span></span><span>AppComponent</span><span class="meta brace square js"><span>]</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta function-call js"><span class="meta arguments js"><span class="meta brace curly js"><span>}</span></span><span class="punctuation definition arguments end bracket round js"><span>)</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta export js"><span class="keyword control js"><span>export</span></span><span>&nbsp;</span></span><span class="meta class js"><span class="storage type class js"><span>class</span></span><span>&nbsp;</span><span class="entity name type class js"><span>AppModule</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{{ '{' }}</span></span></span></div><div class="line"><span class="source js"><span class="meta brace curly js"><span>}</span></span></span></div></pre>
+
+    <p>Other modules in your application can simply import <code> AvatarModule </code>:</p>
+
+    <pre class="editor editor-colors"><div class="line"><span class="source js"><span class="meta import js"><span class="keyword control js"><span>import</span></span><span>&nbsp;</span><span class="punctuation definition modules begin js"><span>{{ '{' }}</span></span><span class="variable other module js"><span>AvatarModule</span></span><span class="punctuation definition modules end js"><span>}</span></span><span>&nbsp;</span><span class="keyword control js"><span>from</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>ng-scrollreveal</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span>@</span><span class="meta function-call js"><span class="entity name function js"><span>NgModule</span></span><span class="meta arguments js"><span class="punctuation definition arguments begin bracket round js"><span>(</span></span><span class="meta brace curly js"><span>{{ '{' }}</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta function-call js"><span class="meta arguments js"><span>&nbsp;&nbsp;declarations</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace square js"><span>[</span></span><span>OtherComponent</span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="keyword operator spread js"><span>...</span></span><span class="meta brace square js"><span>]</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta function-call js"><span class="meta arguments js"><span>&nbsp;&nbsp;imports</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace square js"><span>[</span></span><span>AvatarModule</span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="keyword operator spread js"><span>...</span></span><span class="meta brace square js"><span>]</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source js"><span class="meta function-call js"><span class="meta arguments js"><span class="meta brace curly js"><span>}</span></span><span class="punctuation definition arguments end bracket round js"><span>)</span></span></span></span></span></div><div class="line"><span class="source js"><span class="meta export js"><span class="keyword control js"><span>export</span></span><span>&nbsp;</span></span><span class="meta class js"><span class="storage type class js"><span>class</span></span><span>&nbsp;</span><span class="entity name type class js"><span>OtherModule</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{{ '{' }}</span></span></span></div><div class="line"><span class="source js"><span class="meta brace curly js"><span>}</span></span></span></div></pre>
+
+    <h2>Usage</h2>
+    <pre class="editor editor-colors"><div class="line">&lt;avatar [email]=&quot;email&quot; [displayType]=&quot;'circle'&quot;&gt;&lt;/avatar&gt;</div><div class="line">&lt;input type=&quot;email&quot; [(ngModel)]=&quot;email&quot;&gt;</div></pre>
+
+    <h2>Configuration</h2>
+    <table class="table table-bordered table-hover">
+      <thead>
+      <tr>
+        <th align="left"> configuration option</th>
+        <th align="center"> type</th>
+        <th align="center"> default</th>
+        <th align="left"> description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td align="left"> email</td>
+        <td align="center"> String</td>
+        <td align="center"> none</td>
+        <td align="left"> This email is for generated the initials letters or get the picture from Gravatar API
+          (required)
+        </td>
+      </tr>
+      <tr>
+        <td align="left"> name</td>
+        <td align="center"> string</td>
+        <td align="center"> none</td>
+        <td align="left"> This name is for generated the initials letters (required)</td>
+      </tr>
+      <tr>
+        <td align="left"> size</td>
+        <td align="center"> number</td>
+        <td align="center"> 100</td>
+        <td align="left"> Is the size of the image and avatar</td>
+      </tr>
+      <tr>
+        <td align="left"> background</td>
+        <td align="center"> string</td>
+        <td align="center"> Random color</td>
+        <td align="left"> The background colors for the letter's avatar</td>
+      </tr>
+      <tr>
+        <td align="left"> displayType</td>
+        <td align="center"> string</td>
+        <td align="center"> circle</td>
+        <td align="left"> none, circle, rounded</td>
+      </tr>
+      <tr>
+        <td align="left"> letter</td>
+        <td align="center"> string</td>
+        <td align="center"> ?</td>
+        <td align="left"> These are the default letter</td>
+      </tr>
+      <tr>
+        <td align="left"> defaultProtocol</td>
+        <td align="center"> string</td>
+        <td align="center"> null</td>
+        <td align="left"> specifies a protocol or uses protocol-agnostic gravatar url when empty</td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </section>
