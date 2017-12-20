@@ -3,6 +3,13 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import { Md5 } from 'ts-md5/dist/md5';
 
+/**
+ * The main component for the avatar
+ *
+ * @example
+ * <avatar [email]="email" [displayType]="'circle'"></avatar>
+ *
+ */
 @Component({
   selector: 'avatar',
   templateUrl: './avatar.component.html',
@@ -10,12 +17,45 @@ import { Md5 } from 'ts-md5/dist/md5';
 })
 export class AvatarComponent implements OnInit, OnChanges {
 
+  /**
+   * The user email adresse for Gravatar.com
+   */
   @Input('email') email: string;
+
+  /**
+   * The full name of the user for the avatar letter
+   * @type {string}
+   */
   @Input('name') name: string;
+
+  /**
+   * The display size
+   * @type {number}
+   */
   @Input('size') size = 100;
+
+  /**
+   * Value to set a fixed color via HEX code
+   * @type {string}
+   */
   @Input('background') background = this.getRandomColor();
+
+  /**
+   * Value to set the display type
+   * @type {string} - none|circle|rounded
+   */
   @Input('displayType') displayType = 'none';
+
+  /**
+   * Value to set a default letter
+   * @type {string}
+   */
   @Input('letter') letter = '?';
+
+  /**
+   * Value to set a default protocol
+   * @type {string|null} - http|https
+   */
   @Input('defaultProtocol') defaultProtocol: string = null;
 
   gravatarUrl: string;
@@ -27,6 +67,10 @@ export class AvatarComponent implements OnInit, OnChanges {
   constructor() {
   }
 
+  /**
+   * Randomly generates a HEX color
+   * @return {string}
+   */
   getRandomColor(): string {
     const letters = '0123456789ABCDEF'.split('');
     let color = '#';
@@ -36,6 +80,9 @@ export class AvatarComponent implements OnInit, OnChanges {
     return color;
   }
 
+  /**
+   * Set the avatar letter based on full name or email
+   */
   getLetter(): void {
     if (this.name && this.name.length) {
       const nameInitials = this.name.match(/\b(\w)/g);
@@ -48,6 +95,9 @@ export class AvatarComponent implements OnInit, OnChanges {
     }
   }
 
+  /**
+   * Create a Gravatar API url
+   */
   getAvatar(): void {
     const md5 = new Md5();
     // tslint:disable-next-line
@@ -64,6 +114,9 @@ export class AvatarComponent implements OnInit, OnChanges {
     }
   }
 
+  /**
+   * Set avatar size, background and display type
+   */
   ngOnInit() {
     this.fontSize = (39 * this.size) / 100;
     this.props = {
@@ -88,6 +141,9 @@ export class AvatarComponent implements OnInit, OnChanges {
     this.getAvatar();
   }
 
+  /**
+   * Updates avatar image and letter on email updates
+   */
   ngOnChanges() {
     this.getAvatar();
     this.getLetter();
