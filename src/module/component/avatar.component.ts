@@ -42,7 +42,6 @@ export class AvatarComponent implements OnInit, OnChanges {
       const nameLetters = nameInitials.slice(0, 3).join('');
       this.letter = nameLetters.toUpperCase();
     } else if (this.email && this.email.length) {
-      console.log(this.email);
       const emailInitials = this.email.split('@')[0].match(/\b(\w)/g);
       const emailLetters = emailInitials.slice(0, 3).join('');
       this.letter = emailLetters.toUpperCase();
