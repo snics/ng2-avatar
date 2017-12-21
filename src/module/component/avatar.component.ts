@@ -1,7 +1,7 @@
 /* tslint:disable component-selector-name */
 
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
-import {Md5} from 'ts-md5/dist/md5';
+import {Md5} from '../Md5';
 
 /**
  * The main component for the avatar
@@ -99,12 +99,9 @@ export class AvatarComponent implements OnInit, OnChanges {
    * Create a Gravatar API url
    */
   getAvatar(): void {
-    const md5 = new Md5();
     // tslint:disable-next-line
     if (this.email && /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email)) {
-      const hash = md5.start()
-        .appendStr(this.email)
-        .end();
+      const hash = Md5.init(this.email);
 
       const protocol = this.defaultProtocol ? this.defaultProtocol + ':' : '';
       this.gravatarUrl = `${protocol}//www.gravatar.com/avatar/${hash}?s=${this.size}&d=404`;

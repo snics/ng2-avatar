@@ -15,7 +15,6 @@ View all the directives in action at https://snics.github.io/ng2-avatar
 
 ## Dependencies
 * [Angular](https://angular.io) (*requires* Angular 2 or higher, tested with 2.0.0)
-* [ts-md5](https://github.com/cotag/ts-md5) - The Md5 hashing framework
 
 ## Installation
 Install above dependencies via *npm*. 

@@ -50,8 +50,7 @@
   },
   "dependencies": {
     "@angular/common": "2.0.0",
-    "@angular/core": "2.0.0",
-    "ts-md5": "^1.2.2"
+    "@angular/core": "2.0.0"
   },
   "devDependencies": {
     "@angular/compiler": "2.0.0",
