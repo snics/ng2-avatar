@@ -1,3 +1,13 @@
+<a name="2.2.1"></a>
+## [2.2.1](https://github.com/snics/ng2-avatar/compare/v2.2.0...v2.2.1) (2017-12-21)
+
+
+### Bug Fixes
+
+* **build:** not exported Md5 class ([be6f241](https://github.com/snics/ng2-avatar/commit/be6f241))
+
+
+
 <a name="2.2.0"></a>
 # [2.2.0](https://github.com/snics/ng2-avatar/compare/v2.1.1...v2.2.0) (2017-12-20)
 
