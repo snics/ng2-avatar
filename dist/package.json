@@ -1,0 +1,51 @@
+{
+  "name": "ng2-avatar",
+  "version": "2.2.1",
+  "description": "Angular Avatar (ng2-avatar) is a simple and lightweight avatar component",
+  "keywords": [
+    "ng",
+    "ng2",
+    "ng4",
+    "ngx",
+    "angular",
+    "angular 2",
+    "angular 4",
+    "library",
+    "avatar",
+    "angular-avatar",
+    "letter avatar",
+    "initials avatar",
+    "angular avatar",
+    "profile picture",
+    "string avatar",
+    "ng-avatar",
+    "ng2-avatar",
+    "ng4-avatar",
+    "ngx-avatar",
+    "gravatar",
+    "gravatar api",
+    "angular-gravatar",
+    "ng-gravatar",
+    "ng2-gravatar"
+  ],
+  "author": {
+    "name": "Nico Swiatecki",
+    "url": "https://github.com/snics"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/snics/ng2-avatar.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snics/ng2-avatar/issues"
+  },
+  "homepage": "https://github.com/snics/ng2-avatar",
+  "main": "./bundles/ng2-avatar.umd.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "peerDependencies": {
+    "@angular/common": "^2.0.0",
+    "@angular/core": "^2.0.0"
+  }
+}
