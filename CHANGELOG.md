@@ -1,3 +1,14 @@
+<a name="2.3.0"></a>
+# [2.3.0](https://github.com/snics/ng2-avatar/compare/v2.2.1...v2.3.0) (2018-03-29)
+
+
+### Bug Fixes
+
+* **@dist:** added dist again to gitignore ([5a81fe8](https://github.com/snics/ng2-avatar/commit/5a81fe8))
+* **ssr:** transpiled all js file to es5 using babel preset es2015 (new gulp task) ([a2b5d5b](https://github.com/snics/ng2-avatar/commit/a2b5d5b))
+
+
+
 <a name="2.2.1"></a>
 ## [2.2.1](https://github.com/snics/ng2-avatar/compare/v2.2.0...v2.2.1) (2017-12-21)
 
