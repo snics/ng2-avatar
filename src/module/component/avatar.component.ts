@@ -86,8 +86,12 @@ export class AvatarComponent implements OnInit, OnChanges {
   getLetter(): void {
     if (this.name && this.name.length) {
       const nameInitials = this.name.match(/\b(\w)/g);
-      const nameLetters = nameInitials.slice(0, 3).join('');
-      this.letter = nameLetters.toUpperCase();
+      if (nameInitials) {
+        const nameLetters = nameInitials.slice(0, 3).join('');
+        this.letter = nameLetters.toUpperCase();
+      } else {
+        this.letter = this.name[0];
+      }
     } else if (this.email && this.email.length) {
       const emailInitials = this.email.split('@')[0].match(/\b(\w)/g);
       const emailLetters = emailInitials.slice(0, 3).join('');
