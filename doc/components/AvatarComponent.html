@@ -652,7 +652,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/module/component/avatar.component.ts:101</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/module/component/avatar.component.ts:105</a></div>
                                 </td>
                             </tr>
     
@@ -769,7 +769,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">src/module/component/avatar.component.ts:148</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">src/module/component/avatar.component.ts:152</a></div>
                                 </td>
                             </tr>
     
@@ -808,7 +808,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/module/component/avatar.component.ts:138</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">src/module/component/avatar.component.ts:142</a></div>
                                 </td>
                             </tr>
     
@@ -847,7 +847,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/module/component/avatar.component.ts:114</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">src/module/component/avatar.component.ts:118</a></div>
                                 </td>
                             </tr>
     
@@ -1133,8 +1133,12 @@ export class AvatarComponent implements OnInit, OnChanges {
   getLetter(): void {
     if (this.name &amp;&amp; this.name.length) {
       const nameInitials &#x3D; this.name.match(/\b(\w)/g);
-      const nameLetters &#x3D; nameInitials.slice(0, 3).join(&#x27;&#x27;);
-      this.letter &#x3D; nameLetters.toUpperCase();
+      if (nameInitials) {
+        const nameLetters &#x3D; nameInitials.slice(0, 3).join(&#x27;&#x27;);
+        this.letter &#x3D; nameLetters.toUpperCase();
+      } else {
+        this.letter &#x3D; this.name[0];
+      }
     } else if (this.email &amp;&amp; this.email.length) {
       const emailInitials &#x3D; this.email.split(&#x27;@&#x27;)[0].match(/\b(\w)/g);
       const emailLetters &#x3D; emailInitials.slice(0, 3).join(&#x27;&#x27;);
