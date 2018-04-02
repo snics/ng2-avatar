@@ -1,3 +1,14 @@
+<a name="2.3.1"></a>
+## [2.3.1](https://github.com/snics/ng2-avatar/compare/v2.3.0...v2.3.1) (2018-04-02)
+
+
+### Bug Fixes
+
+* **lint:** add missing semicolon ([bacdaf6](https://github.com/snics/ng2-avatar/commit/bacdaf6))
+* **name:** use first character as fallback for non-ASCII case ([5b32259](https://github.com/snics/ng2-avatar/commit/5b32259))
+
+
+
 <a name="2.3.0"></a>
 # [2.3.0](https://github.com/snics/ng2-avatar/compare/v2.2.1...v2.3.0) (2018-03-29)
 
