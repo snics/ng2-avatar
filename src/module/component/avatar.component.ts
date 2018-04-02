@@ -90,7 +90,7 @@ export class AvatarComponent implements OnInit, OnChanges {
         const nameLetters = nameInitials.slice(0, 3).join('');
         this.letter = nameLetters.toUpperCase();
       } else {
-        this.letter = this.name[0]
+        this.letter = this.name[0];
       }
     } else if (this.email && this.email.length) {
       const emailInitials = this.email.split('@')[0].match(/\b(\w)/g);
