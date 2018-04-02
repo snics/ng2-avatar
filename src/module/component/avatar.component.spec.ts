@@ -93,6 +93,16 @@ describe('AvatarComponent', function () {
       expect(comp.letter).toEqual('AGH');
     });
 
+    it('should create letters by non-ASCII name', () => {
+      expect(comp.letter).toEqual('?');
+
+      expect(comp.name).toBeUndefined();
+      comp.name = '张三';
+      expect(comp.name).toEqual('张三');
+      comp.getLetter();
+      expect(comp.letter).toEqual('张');
+    });
+
     it('should create letters by email', () => {
       expect(comp.letter).toEqual('?');
 
