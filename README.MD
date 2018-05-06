@@ -66,7 +66,7 @@ import { AvatarModule } from 'ng2-avatar';
 
 @NgModule({
   declarations: [OtherComponent, ...],
-  imports: [LibModule, ...], 
+  imports: [AvatarModule, ...], 
 })
 export class OtherModule {
 }
