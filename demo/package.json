@@ -33,7 +33,7 @@
     "@angular/platform-server": "^5.0.0"
   },
   "devDependencies": {
-    "@angular/cli": "1.6.0",
+    "@angular/cli": "^1.6.0",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
     "@angularclass/hmr": "~2.1.3",
