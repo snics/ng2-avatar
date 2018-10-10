@@ -49,8 +49,8 @@
     "check-travis": " travis-status --repo=snics/ng2-avatar --branch=master --fail-pending || echo 'Not yet passing'"
   },
   "dependencies": {
-    "@angular/common": "2.0.0",
-    "@angular/core": "2.0.0"
+    "@angular/common": "^2.0.0",
+    "@angular/core": "^2.0.0"
   },
   "devDependencies": {
     "@angular/cli": "^6.2.4",
