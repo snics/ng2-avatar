@@ -5,7 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/snics/ng2-avatar/badge.svg?branch=master)](https://coveralls.io/github/snics/ng2-avatar?branch=master)
 [![dependency Status](https://david-dm.org/snics/ng2-avatar/status.svg)](https://david-dm.org/snics/ng2-avatar)
 [![devDependency Status](https://david-dm.org/snics/ng2-avatar/dev-status.svg?branch=master)](https://david-dm.org/snics/ng2-avatar#info=devDependencies)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/snics/ng2-avatar#the-mit-license)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/snics/ng2-avatar#the-mit-license) [![Greenkeeper badge](https://badges.greenkeeper.io/snics/ng2-avatar.svg)](https://greenkeeper.io/)
 
 Angular Avatar (ng2-avatar) is a simple and lightweight avatar component
 
