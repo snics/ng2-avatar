@@ -19,7 +19,7 @@ export { AvatarComponent } from './component/avatar.component';
   ]
 })
 export class AvatarModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<AvatarModule> {
     return {
       ngModule: AvatarModule,
       providers: []
